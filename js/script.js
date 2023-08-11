@@ -17,27 +17,27 @@ function escrevendoLetra() {
 
 escrevendoLetra();
 
-/*Verifica se um determinado elemento está na View Port */
-function verificaViewPort(){
-    const observer = new IntersectionObserver(entries => {
-        console.log(entries);
+// /*Verifica se um determinado elemento está na View Port */
+// function verificaViewPort(){
+//     const observer = new IntersectionObserver(entries => {
+//         console.log(entries);
     
-        Array.from(entries).forEach( entry => {
-            if (entry.intersectionRatio >= .5) {
-                entry.target.classList.add('init-hidden-off');
-            }
-        })
+//         Array.from(entries).forEach( entry => {
+//             if (entry.intersectionRatio >= .5) {
+//                 entry.target.classList.add('init-hidden-off');
+//             }
+//         })
     
-    }, {
-        threshold: [0, .5, 1]
-    })
+//     }, {
+//         threshold: [0, .5, 1]
+//     })
     
-    Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
-        observer.observe(element);
-    })
-}
+//     Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
+//         observer.observe(element);
+//     })
+// }
 
-verificaViewPort();
+// verificaViewPort();
 
 
 /*Transição de cards*/
